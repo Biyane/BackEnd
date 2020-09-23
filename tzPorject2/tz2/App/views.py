@@ -60,7 +60,7 @@ class LoginView(APIView):
 
     def post(self, request):
         print("Hello 1")
-        serializer = UserSerializer(data=request.data)
+        serializer = LoginSerializer(data=request.data)
         if request.user.is_authenticated:
             return Response({'is': 'auth'})
         print(serializer.is_valid())
