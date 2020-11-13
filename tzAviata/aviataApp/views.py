@@ -68,6 +68,7 @@ def aviata_booking_test(request):
 def aviata_booking_for_month(request):
     date_now = dt.now() + datetime.timedelta(days=0)
     for i in range(31):
+        my_stack.clear()
         date_on = date_now + datetime.timedelta(days=randrange(5, 30))
         date_to = '/'.join(str(date_on).split(" ")[0].split('-')[::-1])
         date_from = '/'.join(str(date_now).split(" ")[0].split('-')[::-1])
